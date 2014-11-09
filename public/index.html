@@ -10,33 +10,67 @@
         <script src="lib/jsgif-master/GIFEncoder.js"></script>
         <script src="lib/jsgif-master/b64.js"></script>
 
-        <link rel="stylesheet" href="index.css"></link>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
     </head>
     <body>
-        <p> Welcome, enter an image URL, then click load, then click shake. Arrow keys to move text. </p>
-        <div>
-            <span> Image url: </span>
-            <input id="urlInput"/>
-        </div>
-        <div>
-            <span> Text: </span>
-            <input id="textInput" />
-            <span> Size: </span>
-            <input id="sizeInput" value="30"/>
-            <span> Color: </span>
-            <input id="colorInput" value="white" />
-            <span> Font: </span>
-            <input id="fontInput" value="arial" />
-        </div>
-        <div>
-            <span> shakiness (least) 0-100 (most): </span>
-            <input id="shakinessInput"  value="1"/>
-            <span> frame delay (ms): </span>
-            <input id="delayInput" value="25" />
-        </div>
-        <div>
-            <button id="loadButton">load</button>
-            <button id="createButton">shake</button>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"> Welcome, enter an image URL, then click load, then click shake. Arrow keys to move text. </h3>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <span class="input-group-addon"> Image url: </span>
+                    <input class="form-control" id="urlInput"/>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <span class="input-group-addon"> Text: </span>
+                            <input class="form-control" id="textInput" />
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <span class="input-group-addon"> Size: </span>
+                            <input class="form-control" id="sizeInput" value="30" />
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <span class="input-group-addon"> Color: </span>
+                            <input class="form-control" id="colorInput" value="white" />
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <span class="input-group-addon"> Font: </span>
+                            <input class="form-control" id="fontInput" value="arial" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon"> shakiness (least) 0-100 (most): </span>
+                            <input class="form-control" id="shakinessInput" value="1" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon"> frame delay (ms): </span>
+                            <input class="form-control" id="delayInput" value="25" />
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button class="btn btn-default" id="loadButton">load</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default" id="createButton">shake</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="picHolder" />
     </body>

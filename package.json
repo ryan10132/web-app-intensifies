@@ -1,20 +1,21 @@
 {
-  "name": "node-js-getting-started",
+  "name": "web-app-intensifies",
   "version": "0.1.2",
-  "description": "A sample Node.js app using Express 4",
+  "description": "An image intensifier",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "express": "~4.9.x",
+    "request": "2.47.x"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/ryan10132/web-app-intensifies"
   },
   "keywords": [
     "node",

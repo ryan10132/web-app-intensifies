@@ -1,7 +1,42 @@
 <html>
     <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+        <script src="main.js"></script>
+        <script src="intensifier.js"></script>
+
+        <script src="lib/jsgif-master/LZWEncoder.js"></script>
+        <script src="lib/jsgif-master/NeuQuant.js"></script>
+        <script src="lib/jsgif-master/GIFEncoder.js"></script>
+        <script src="lib/jsgif-master/b64.js"></script>
+
+        <link rel="stylesheet" href="index.css"></link>
     </head>
     <body>
-        <p> hello </p>
+        <p> Welcome, enter an image URL, then click load, then click shake. Arrow keys to move text. </p>
+        <div>
+            <span> Image url: </span>
+            <input id="urlInput"/>
+        </div>
+        <div>
+            <span> Text: </span>
+            <input id="textInput" />
+            <span> Size: </span>
+            <input id="sizeInput" />
+            <span> Color: </span>
+            <input id="colorInput" />
+            <span> Font: </span>
+            <input id="fontInput" />
+        </div>
+        <div>
+            <span> shakiness (least) 0-100 (most): </span>
+            <input id="shakinessInput" />
+            <span> frame delay (ms): </span>
+            <input id="delayInput" />
+        </div>
+            <button id="loadButton">load</button>
+            <button id="createButton">shake</button>
+        </div>
+        <div id="picHolder" />
     </body>
 </html>

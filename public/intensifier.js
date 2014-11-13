@@ -70,11 +70,12 @@ Intensifier = (function() {
             var binary_gif = encoder.stream().getData() //notice this is different from the as3gif package!
             var data_url = 'data:image/gif;base64,'+encode64(binary_gif);
 
-            parent.html('<img src="' + data_url + '"/>');
+            parent.html('<img width="100%" src="' + data_url + '"/>');
         } else {
             parent.html('');
-            drawOntoCanvas(context, imageTag, points[0], textOptions);
-            parent.append(canvas);
+            //drawOntoCanvas(context, imageTag, points[0], textOptions);
+            var imageTag = $(imageTag).css("width", "100%");
+            parent.append(imageTag);
         }
 
     }

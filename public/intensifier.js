@@ -73,9 +73,12 @@ Intensifier = (function() {
             parent.html('<img width="100%" src="' + data_url + '"/>');
         } else {
             parent.html('');
-            //drawOntoCanvas(context, imageTag, points[0], textOptions);
-            var imageTag = $(imageTag).css("width", "100%");
-            parent.append(imageTag);
+            drawOntoCanvas(context, imageTag, points[0], textOptions);
+            var dataUrl = canvas.toDataURL();
+            var image = $("<img></img>");
+            image.attr("src", dataUrl);
+            image.css("width", "100%");
+            parent.append(image);
         }
 
     }

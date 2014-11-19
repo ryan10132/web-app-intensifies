@@ -11,8 +11,8 @@ Intensifier = (function() {
     }
 
     var getDrawPoints = function(width, height, origWidth, origHeight) {
-        var xDiff = (origWidth - width) / 2;
-        var yDiff = (origHeight - height) / 2;
+        var xDiff = origWidth - width;
+        var yDiff = origHeight - height;
         return [{x:-xDiff, y: 0}, {x: 0, y:0}, {x:-xDiff / 2, y:-yDiff}];
     }
 
